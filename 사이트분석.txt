@@ -1,0 +1,49 @@
+url : https://pofo.themezaa.com/home-classic-interactive-agency/#
+
+콘텐츠 영역 : 1170px (좌우여백 : 0 15px) => 실제 보여지는 영역 1140px
+전체 각 섹션별 패럴럭스 기능을 모두 구현한다.
+/////////////////////////////////////////////////////////////////////////////////
+<header>
+width:100%; height:60px; 
+콘텐츠영역:1170px, 좌측:로고(105*26px), 중간우측:네비게이션, 우측: 아이콘 사이드메뉴(width:146px;),
+        좌우여백:0 15px, font-size:12px, font-weight:600, font-family:Montserrat, 
+        color:#232323, background:#232323
+좌측박스: 105
+우측박스: 1140-105= 1035px 
+
+서브메뉴: width:145px
+
+패럴럭스 기능 :스크롤이 아래로 내려가면 헤더가 위로 안보일때까지 부드럽게 올라가고,
+            스크롤이 위로 올라가면 헤더가 부드럽게 아래로 내려온다.
+/////////////////////////////////////////////////////////////////////////////////
+<main>
+ -section1(main slide)
+           : width:100%, height:100%; bg:full screen; 
+             slide-:drag&drop, 3초간격, 타이머제어, 일정시간 지나면 다시 플레이 
+             h3:font-size:18px,font-weight:300, h2:font-size:70px,font-weight:700,
+             p: #232323,font-size:12px
+
+ -section2 : padding:130px 0, background:#f7f7f7, 
+
+ -section3 : padding:130px 0, background:#1c1c1c
+
+ -section4(*반응형 & 액티비티 애니메이션 갤러리)=> 버튼클릭에 따라 반응애니메이션 구현되면서 이미지 재배치 
+           : width:100% 
+       메뉴 : height:180px, color;#6f6f6f, font-size:12px, font-weight:600, 
+
+ -section5 : padding:130px 0, background:#fff
+
+ -section6 : width:100%, padding:0, background:#fff
+             갤러리 이미지 여백: 0 5px, 
+
+ -section7 : width:100%, padding:130px 0, background:#fff,
+
+ -section8 : width:100%, height:602.433px, background:#1c1c1c,
+
+ -section9 : padding:130px 0, background:#fff,
+
+ -section10 : padding:30px 0, height:80px, background:#ff214f
+
+ ///////////////////////////////////////////////////////////////////////////////////
+<footer>
+background:#1c1c1c,
