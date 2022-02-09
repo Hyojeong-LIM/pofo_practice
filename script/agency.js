@@ -16,6 +16,36 @@
             this.footer();
         }
         header(){
+            //윈도우 스크롤 이벤트
+            let newTop = $(window).scrollTop();
+            let oldTop = newTop;
+            let result = '';
+            const header = $('#header');
+            const $window = $(window);
+
+            $window.scroll(()=>{
+                if( $window.scrollTop()==0){
+                    header.removeClass('addH60');
+                }
+                else{
+                    header.addClass('addH60');
+
+                    newTop = $window.scrollTop();
+
+                    result = oldTop-newTop>0? 'UP':'DOWN';
+
+                    if(result=='UP'){
+                        header.addClass('addShow');
+                        header.removeClass('addHide');
+                    }
+                    if(result=='DOWN'){
+                        header.addClass('addHide');
+                        header.removeClass('addShow');
+                    }
+                    oldTop = newTop;
+                }
+            });
+
             //메인버튼 이벤트
             const mainBtn = $('.main-btn');
             const sub = $('.sub');

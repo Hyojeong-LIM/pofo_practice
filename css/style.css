@@ -6,7 +6,10 @@
 #skip li a:focus{line-height:50px;font-size:20px;}
 
 #wrap {z-index:1;position:relative;}
-#wrap #header{z-index:3;position:fixed;top:0;left:0;width:100%;height:60px;background:rgba(255, 255, 255, .9);}
+#wrap #header{z-index:3;position:fixed;top:0;left:0;width:100%;height:72px;background:rgba(255, 255, 255, .9);transition:all .3s;}
+#wrap #header.addH60{height:60px;}
+#wrap #header.addH60.addHide{top:-60px;}
+#wrap #header.addH60.addShow{top:0;}
 #wrap #header .container{position:relative;width:100%;max-width:1170px;margin:0 auto;height:100%;padding:0 15px;}
 #wrap #header .container .wrap{width:100%;height:100%;display:flex;}
 #wrap #header .container .wrap .logo {width:105px;height:100%;display:flex;margin:0 auto 0 0;}
@@ -19,10 +22,12 @@
 #wrap #header .container .wrap .navigation #nav > ul > li{padding:0 20px;}
 #wrap #header .container .wrap .navigation #nav > ul > li:nth-child(2), /* sub2가 밖으로 못 나가도록, fixed 따라가니까 */
 #wrap #header .container .wrap .navigation #nav > ul > li:nth-child(4){position:relative;} 
-#wrap #header .container .wrap .navigation #nav > ul > li > a{display:block;height:60px;line-height:60px;font-size:12px;font-weight:600;transition:all .3s;color:#000;}
+#wrap #header .container .wrap .navigation #nav > ul > li > a{display:block;height:72px;line-height:72px;font-size:12px;font-weight:600;transition:all .3s;color:#000;}
+#wrap #header.addH60 .container .wrap .navigation #nav > ul > li > a{height:60px;line-height:60px;}
 #wrap #header .container .wrap .navigation #nav > ul > li > a:hover{color:#777;}
 /* 서브메뉴-전체정리 */
-#wrap #header .container .wrap .navigation #nav > ul > li > .sub{position:absolute;top:60px;left:0;width:100%;background:#1c1c1c;}
+#wrap #header .container .wrap .navigation #nav > ul > li > .sub{position:absolute;top:72px;left:0;width:100%;background:#1c1c1c;}
+#wrap #header.addH60 .container .wrap .navigation #nav > ul > li > .sub{top:60px;}
 #wrap #header .container .wrap .navigation #nav > ul > li > .sub1{display:none;}
 #wrap #header .container .wrap .navigation #nav > ul > li > .sub3{display:none;}
 #wrap #header .container .wrap .navigation #nav > ul > li > .sub24.sub2{display:none;}
